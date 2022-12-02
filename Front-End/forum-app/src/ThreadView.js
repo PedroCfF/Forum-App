@@ -1,13 +1,13 @@
 import DefaultContainer from "./Components/DefaultContainer";
-import Container from "react-bootstrap/Container";
-
+import Post from "./Components/Post";
+import { useParams } from "react-router-dom";
 const ThreadView = (props) => {
   const params = useParams();
   const threadId = params.threadId;
 
   return (
     <DefaultContainer>
-      <Post threadId></Post>
+      <Post threadId={threadId}></Post>
     </DefaultContainer>
   );
 };
